@@ -1,0 +1,58 @@
+---
+import NavTitle from "./NavTitle.astro"
+
+const navigationLinks = [
+    {link: "/", name: "Accueil"},
+    {link: "/n", name: "Qu'est-ce-que le Reiki ?"},
+    {link: "/n", name: "Les séances"},
+    {link: "/n", name: "Qui suis-je"},
+    {link: "/n", name: "Contact"},
+]
+---
+
+<!-- Navigation component -->
+
+<div id="navigation">
+    <div class="nav-content flex">
+        <NavTitle />
+        <button>Réserver une séance</button>
+        <nav>
+            {navigationLinks.map(
+                (navLink) => <a href={navLink.link} class="main-font-regular font-small link">{navLink.name}</a>
+            )}
+        </nav>
+    </div>
+</div>
+
+<style>
+    #navigation {
+        background-color: #FFF;
+        height: 130px;
+        padding-right:36%;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-content {
+        justify-content: space-between;
+    }
+
+   .link {
+        padding: 0 0.5rem;
+    }
+
+    .link:target{
+        font-family: 'MainFontBold';
+    }
+
+    .link:hover {
+        border-bottom: 2px solid var(--accent-color);
+    }
+
+    button {
+        background-color: var(--accent-color);
+    }
+</style>
