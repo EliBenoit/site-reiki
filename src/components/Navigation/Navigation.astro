@@ -1,4 +1,5 @@
 ---
+import Button from "../Button/Button.astro"
 import NavTitle from "./NavTitle.astro"
 
 const navigationLinks = [
@@ -15,7 +16,7 @@ const navigationLinks = [
 <div id="navigation">
     <div class="nav-content flex">
         <NavTitle />
-        <button>Réserver une séance</button>
+        <Button client:load>Réserver une séance</Button>
         <nav>
             {navigationLinks.map(
                 (navLink) => <a href={navLink.link} class="main-font-regular font-small link">{navLink.name}</a>
@@ -50,9 +51,5 @@ const navigationLinks = [
 
     .link:hover {
         border-bottom: 2px solid var(--accent-color);
-    }
-
-    button {
-        background-color: var(--accent-color);
     }
 </style>

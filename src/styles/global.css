@@ -2,6 +2,7 @@
 :root {
   --main-color: #DCD6B5;
   --accent-color: #146879;
+  --low-oppacity-accent-color: #14687947;
 }
 
 /* Global CSS*/
@@ -14,4 +15,8 @@ body {
 a {
     text-decoration: none;
     color: var(--accent-color);
+}
+
+p {
+    margin: 0;
 }

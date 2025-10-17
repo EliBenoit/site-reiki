@@ -1,0 +1,33 @@
+---
+---
+
+
+<button class="button">
+    <p class="font-small">
+        <slot/>
+    </p>
+</button>
+
+<script>
+  // Find all buttons with the `alert` class on the page.
+  const button = document.querySelector('.button');
+
+  // Handle clicks on each button.
+    button.addEventListener('click', () => {
+        console.log('You cliked on me !');
+      });
+</script>
+
+<style>
+    button { 
+        all: unset;
+        background-color: var(--accent-color);
+        color: var(--main-color);
+        border-radius: 95px;
+        padding: 1rem;
+    }
+
+    button:hover{
+        outline: 10px solid var(--low-oppacity-accent-color);
+    }
+</style>
