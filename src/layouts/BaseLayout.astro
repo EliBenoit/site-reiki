@@ -18,7 +18,30 @@ import Navigation from "../components/Navigation/Navigation.astro";
 		<title>Eli Vercollier - Thérapeute reiki Nancy</title>
 	</head>
 	<body>
-        <Navigation />
-		<slot/>
+		<Navigation />
+		<div class="cropped-image"></div>
+		<div  class="content">
+			<slot/>
+		</div>
 	</body>
 </html>
+
+<style>
+	.cropped-image {
+		width: 36%;
+		height: 100vh;
+		background-image: url('../../public/images/reiki-illustration.jpg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		clip-path:ellipse(71% 65% at 71% 50%);
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+
+
+	.content {
+		margin-right: 36%;
+	}
+</style>
