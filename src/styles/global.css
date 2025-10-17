@@ -1,0 +1,17 @@
+/* Variables definition*/
+:root {
+  --main-color: #DCD6B5;
+  --accent-color: #146879;
+}
+
+/* Global CSS*/
+body {
+    background-color: var(--main-color);
+    font-family: 'MainFontRegular';
+    font-size: 1.438em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
